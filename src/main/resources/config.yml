@@ -1,0 +1,11 @@
+# Can family members hurt each other (guns, rockets, melee)?
+friendly-fire: false
+
+# Regular members get a cosmetic black fedora with their pistol
+member-fedora: true
+
+# Emeralds ("Mafia Cash") paid to a member when their task is approved. 0 = none
+task-reward-emeralds: 8
+
+# How long a /mafia join request stays open for the Boss
+join-request-seconds: 120

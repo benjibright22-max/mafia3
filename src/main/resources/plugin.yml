@@ -1,0 +1,52 @@
+name: MafiaPlugin
+version: 1.0.0
+main: com.mafia.MafiaPlugin
+api-version: '1.21'
+description: A Boss, a Taskmaster, a family, real guns, and consequences.
+
+commands:
+  mafia:
+    description: Mafia main command (join, info, accept, decline, appoint, demote, kick, leave, loadout, resign)
+    usage: /mafia <join|info|leave|loadout|accept|decline|appoint|demote|kick|resign>
+    permission: mafia.use
+  taskmafia:
+    description: Taskmaster hands a task to a member (or all)
+    usage: /taskmafia <member|all> <task>
+    permission: mafia.use
+  taskcomplete:
+    description: Report your task as done
+    usage: /taskcomplete
+    permission: mafia.use
+  mafiachat:
+    description: Private family chat
+    usage: /mafiachat <message>
+    aliases: [mc]
+    permission: mafia.use
+  mafiahat:
+    description: Give a Mafia Hat (admin)
+    usage: /mafiahat [player]
+    permission: mafia.admin
+  forcejoinmember:
+    description: Force a player in as a normal member (admin, skips the Boss's choice)
+    usage: /forcejoinmember [player]
+    permission: mafia.admin
+  forcejointaskmaster:
+    description: Force a player in as Taskmaster (admin, works with no Boss)
+    usage: /forcejointaskmaster [player]
+    permission: mafia.admin
+  forcejoinboss:
+    description: Force a player in as Boss (admin, for testing)
+    usage: /forcejoinboss [player]
+    permission: mafia.admin
+  mafiareset:
+    description: Wipe the whole family (admin)
+    usage: /mafiareset
+    permission: mafia.admin
+
+permissions:
+  mafia.use:
+    description: Use the normal Mafia commands
+    default: true
+  mafia.admin:
+    description: Mafia admin and testing commands
+    default: op
